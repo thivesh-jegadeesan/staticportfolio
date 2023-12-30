@@ -4,13 +4,23 @@ body {
     background-color: #95968f4f;
 }
 
+.responsive-width{
+    width: 100%;
+}
+
 @media only screen and (max-width:800px) {
     /* For tablets: */
     
+.responsive-width{
+    width: 70%;
+}
 }
 @media only screen and (max-width:500px) {
     /* For mobile phones: */
     
+.responsive-width{
+    width: 30%;
+}
 }
 
 section {

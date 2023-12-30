@@ -1,0 +1,334 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head href="/portfolio/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href='static/css/app.css'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <title>My portfolio</title>
+</head>
+<body onload="myFunction()">
+
+    <!-- Common sidebar -->
+    <div class="sidenav">
+        <div>
+          <center>
+            <img src="static/images/01a.jpg" width="70%" style="border-radius: 50%;">
+          </center>
+        </div>
+        <div>
+          <div class="name text-center">Thivesh Jegadeesan</div>
+          <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2">
+              <a target="_blank" href="https://www.facebook.com/profile.php?id=100005485574765">
+              <img src="static/images/fb.png" width="100%" style="border-radius: 10%;">
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a target="_blank" href="https://www.instagram.com/star_._boy._/">
+                <img src="static/images/insta.jpeg" width="100%" style="border-radius: 22%;">
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a target="_blank" href="https://github.com/thivesh-jegadeesan">
+                <img src="static/images/github.png" width="100%" style="border-radius: 55%;">
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a target="_blank" href="https://www.linkedin.com/in/thivesh-jegadeesan-7406b3182/">
+                <img src="static/images/linkedin.png" width="100%" style="border-radius: 10%;">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:10%">
+            <a class="sidenava"  href="#Home">Home</a>
+            <a class="sidenava" href="#About">About</a>
+            <a class="sidenava"  href="#skill">Skills and achivements</a>
+            <a class="sidenava"  href="#project">Projects</a>
+            <a class="sidenava" href="#contact">Contact</a>
+        </div>
+        <div style="margin-top:30%">
+           <h5 style="text-align: center;color: #fff;border-bottom: 2px solid #5e678d;">PORTFOLIO</h5>
+        </div>
+    </div>
+
+    <!-- Content block to be overridden in child templates -->
+    <div class="content-fluid" style="margin-left:20%">
+        <button onclick="goToTop()" id="goToTopBtn" title="Go to Top" data-tooltip="Scroll to Top">^</button>
+            <div class="container" id="Home" style="background-image: url'static/images/thiveshbg1.jpg';  background-repeat: no-repeat; background-size: 100% 100%; padding: 10px 150px 500px 150px;">
+                    <div class="row" style="padding:50px 0px 0px 100px; font-weight: bold; font-size:40px">
+                        Thivesh Jegadeesan            
+                    </div>
+                    <div class="row" style="padding:0px 0px 0px 120px">
+                        <div class="col-md-1"style="margin:0px 0px 0px 50px; width: fit-content;font-weight: bold; font-size:40px">
+                            I'm a
+                        </div> 
+                        <div class="col-md-8" id="devdiv" style="font-weight: bold; font-size:40px"></div>      
+                    </div>
+            </div>
+
+
+            <div class="container-fluid" id="About">
+                <h3 style="padding-top:10px">About</h3>
+                <div style="font-size:18px">&emsp;&emsp;Versatile professional with two years of experience as a Software Developer. 
+                    Adept at coding to create reliable and user-friendly systems. 
+                    Proficient in developing and upgrading API tracking products for the drug manufacturing industry.
+                    Outstanding analytical abilities, problem-solving, decision-making, and interpersonal skills.
+                </div>
+               <p>You can download my resume <a href="static/PDF/Thivesh Resume 2.pdf" download>here</a></p>
+                <div class="container" >
+                    <div class="row" style="padding-top:20px;">
+                        <div class="col-md-6">
+                            <h5 class="h5">Profile & Education</h5>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Thivesh Jegadeesan</h2>
+                                        <p class="p">Experienced full-stack developer with 2 years in diverse technologies, 
+                                            specializing in front-end and back-end, and a proven track record as a team lead overseeing
+                                             successful project deliveries.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Certification Cource</h2>
+                                        <p  class="p"><b>Institute:</b> Udemy (online)<br><b>Year:</b> Jan 2024<br>
+                                        <b>Skills:</b> Python, Django, React JS, React Native
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Certification Cource</h2>
+                                        <p  class="p"><b>Institute:</b> Great Learning (online)<br><b>Year:</b> Dec 2023<br>
+                                        <b>Skills:</b> Typescript
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Master's in Datascience</h2>
+                                        <p  class="p"><b>Institute:</b> Atu, Donegal, Ireland.<br><b>Year:</b> 2023-2024<br>
+                                        <b>Skills:</b> Machine Learning, Deep Learning, Python(Pandas), Data warehouse.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Certification Cource</h2>
+                                        <p  class="p"><b>Institute:</b> Greens technologies, Chennai, India.<br><b>Year:</b> 2021<br>
+                                        <b>Skills:</b> Core Java, Selenium
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Bachelor's in Mechanical Engineering</h2>
+                                        <p  class="p"><b>Institute:</b> Veltech Hightech, Chennai, India.<br><b>Year:</b> 2016-2020<br>
+                                        <b>Skills:</b> AutoCad, Catia, Creo
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Add more timeline items as needed -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5  class="h5">Professional Experience</h5>
+            
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Senior Software Engineer</h2>
+                                        <p  class="p"><b>Company:</b> Codentrix Technologies  <br> <b>Year:</b>  Jan 2023 - Sep 2023  <br>
+                                            <b>Achivements:</b>Honored with the "Excellence" award, recognized as the first recipient in the past five years<br>
+                                            <b>Projects:</b> PharmTracQR, Formulation <br>
+                                        <b>Skills:</b> AWS(EC2, S3, RDS), Jira, Github, Python, Django, PostgreSql.<br>
+                                        <b>Responsibilities:</b> As a Project Lead for two B2B SaaS software products, 
+                                        successfully orchestrated the development, deployment, and maintenance for over 25 client companies,
+                                         managing diverse subscriptions. Spearheaded the release of version 2.0, showcasing adept leadership in product evolution and client satisfaction.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Software Developer</h2>
+                                        <p  class="p"><b>Company:</b> Codentrix Technologies <br> <b>Year:</b>  Jan 2022 - Dec 2022  <br> <b>Projects:</b> Tracerbee, PharmTracQR <br>
+                                        <b>Skills:</b> PHP, Laravel, Javascrip, JQuery, Ajax, MySQL.<br>
+                                        <b>Responsibilities:</b> As a Full Stack Developer in a SaaS-based B2B product, contributed to the end-to-end development of the platform. 
+                                        Elevated to a leadership role in PharmTracQR, steering the strategic direction and advancements of the SaaS B2B product.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-content">
+                                        <h2  class="h2">Software Developer Trainee</h2>
+                                        <p  class="p"><b>Company:</b> Codentrix Technologies <br> <b>Year:</b> Sep 2021  - Dec 2021  <br> <b>Projects:</b> Emerson Invoice print application <br>
+                                        <b>Skills:</b> HTML, CSS, Bootstrap, Javascrip.<br>
+                                        <b>Responsibilities:</b>Contributed as a developer in an Invoice Print Application for client Emerson, specializing in generating PDFs for a range of documents, including invoices, warranty certificates, and QC certificates. Responsible for the technical implementation and functionality of the print application.</p>
+                                    </div>
+                                </div>
+                                <!-- Add more timeline items as needed -->
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+
+        <div class="container-fluid" id="skill">
+            <h3 style="padding-top:10px">Skills and Achivements</h3>
+            <!-- Add your about page content here -->
+            <div class="container-fluid" >
+                <p>Proficient in utilizing Jira for streamlined project management and GitHub for version control,
+                     I bring a strong foundation in HTML, CSS, JavaScript, jQuery, Ajax, PHP, Laravel, Python, Django, and MySQL. 
+                     My skills are complemented by hands-on experience and a commitment to delivering high-quality software solutions.</p>
+        
+                <canvas id="myBarChart" width="100%" height="50%"></canvas>
+                <div style="padding-top:30px" >
+                    <h3>Timeline</h3>
+                    <p>Embarked on a dynamic career journey marked by continuous growth and achievement. 
+                        From early roles in full-stack development to leadership positions in SaaS project management, 
+                        my timeline reflects a commitment to innovation and excellence.</p>
+                    <div  id="roadMap" data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <div class="container-fluid" id="project">
+            <h3 style="padding-top:10px">Recent Projects</h3>
+            <!-- Add your about page content here -->
+                <p>As a team lead at Codentrix, I successfully led the development, launch, and delivery of two impactful 
+                SaaS projects—PharmTracQR and Formulation. I played a key role in coding, ensuring quality, and 
+                overseeing project management. These solutions were adopted by over 25 clients, serving a user base 
+                of more than 10,000 individuals.</p>
+                <div class="container-fluid projectcontent">
+                    <div class="row" style="padding-top:10px">
+                       
+                        <div class="col-md-6">
+                            <div class="project-box">
+                                <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-Pharma-api-manufacturers">
+                                    <img src="{%static '/images/portfolio.png'%}" >
+                                </a>
+                                <div class="overlay">
+                                    <h3>Portfolio</h3>
+                                <p class="project-p">Created a dynamic and personalized portfolio website using Python and Django, showcasing my skills, projects, and professional journey. <br><br></p>
+                                    
+                                </div>
+                            </div>
+        
+                        </div>
+                       
+                        <div class="col-md-6">
+                            <div class="project-box">
+                                <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-Pharma-api-manufacturers">
+                                    <img src="{%static '/images/pharmtracqr.png'%}" >
+                                </a>
+                                <div class="overlay">
+                                    <h3>PharmTracQR</h3>
+                                <p class="project-p">Led the development of PharmTracQR, a leading SaaS solution for API manufacturing companies, revolutionizing pharmaceutical traceability through a secure cloud-based platform.</p>
+                                    
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                       
+                        
+                    </div>
+                    <div class="row" style="padding-top:10px">
+                        <div class="col-md-6">
+                            <div class="project-box">
+                                <a  target="_blank" href="https://www.codentrixtechnologies.com/qr-code-for-agrochemical">
+                                    <img src="{%static '/images/agro.png'%}" >
+                                </a>
+                                <div class="overlay">
+                                    <h3>Formulation</h3>
+                                <p class="project-p">As the team lead for the Formulation project, I oversaw the successful development of a PHP Laravel-based solution enabling companies to generate QR codes with embedded weblinks and adhere to compliance mandates through seamless integration of hardware and end-to-end support.</p>
+                                    
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="col-md-6">
+                            <div class="project-box">
+                                <a  target="_blank" href="https://www.codentrixtechnologies.com/traceability-software-and-services" target="_blank">
+                                    <img src="{%static '/images/tracerbee.png'%}" >
+                                </a>
+                                <div class="overlay">
+                                    <h3>Tracerbee</h3>
+                                <p class="project-p">Developed TracerBee, a comprehensive software product using PHP Laravel, enabling end-to-end Part Traceability. Seamlessly trace parts or items from Raw Material to Finished Goods with a single click</p>
+                                    
+                                </div>
+                            </div>
+        
+                        </div>
+                       
+                    </div>
+        
+                    <div class="row" style="padding-top:10px">
+                        <div class="col-md-6">
+                        <div class="project-box">
+
+                            <img src="{%static '/images/imginv.jpg'%}" height="50%">
+
+                            <div class="overlay">
+                                <h3>Invoice Application</h3>
+                            <p class="project-p">Developed PHP Laravel code for Emerson, facilitating the printing of invoices, warranty certificates, QC certificates, and more, ensuring seamless document generation and management.</p>
+                                
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+                </div>
+        </div>
+
+
+        <footer>
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>PORTFOLIO</h5>
+
+                    <a style="text-decoration:none;padding:5px; font-size:18px;" href="static/PDF/Thivesh Resume 2.pdf" download>Download CV <i class="fa fa-file-pdf-o ipdf" ></i></a>
+                </div>
+                <div class="col-md-3">
+                    <h5 style="text-align:left">Quick Links</h5>
+                    <ul style="list-style-type: none;padding: 0;margin: 0; text-align:left">
+                    <a style="text-decoration:none;" href="#Home"><li style="text-decoration: none;">Home</lr></a>
+                    <a style="text-decoration:none;" href="#About"><li style="text-decoration: none;">About</lr></a>
+                    <a style="text-decoration:none;" href="#skill"><li style="text-decoration: none;">Skills and achievement</lr></a>
+                    <a style="text-decoration:none;" href="#project"><li style="text-decoration: none;">Projects</lr></a>
+                    <a style="text-decoration:none;" href="#contact"><li style="text-decoration: none;">Contact</lr></a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow me</h5>
+                    <a style="text-decoration:none; padding:5px" href="https://www.instagram.com/star_._boy._/"><i class="fa fa-instagram"></i></a>
+                    <a style="text-decoration:none; padding:5px" href="https://www.facebook.com/profile.php?id=100005485574765"><i class="fa fa-facebook-f"></i></a>
+                    <a style="text-decoration:none; padding:5px" href="https://www.linkedin.com/in/thivesh-jegadeesan-7406b3182/"><i class="fa fa-linkedin"></i></a>
+                    <a style="text-decoration:none; padding:5px" href="https://github.com/thivesh-jegadeesan"><i class="fa fa-github"></i></a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact me</h5>
+                    <a style="text-decoration:none; padding:5px" href="tel:+353899674570"><i class="fa fa-phone"></i></a>
+                    <a style="text-decoration:none; padding:5px" href="mailto:thivesh99@gmail.com"><i class="fa fa-envelope"></i></a>
+
+                </div>
+            </div>
+
+            <!-- <p>Copyright © 2023 | PORTFOLIO | All Rights Reserved</p> {% endcomment-->
+        </footer>
+    </div>
+</body>
+<script src="static/script/app.js"></script>
+<script src="static/script/home.js"></script>
+<script src="static/script/skill.js"></script>
+</html>

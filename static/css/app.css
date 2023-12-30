@@ -9,19 +9,22 @@ body {
 }
 
 @media only screen and (max-width:800px) {
-    /* For tablets: */
-    
-.responsive-width{
-    width: 70%;
-}
+    /* For tablets: */      
+    .responsive-width{
+        width: 70%;
+    }
 }
 @media only screen and (max-width:500px) {
-    /* For mobile phones: */
-    
-.responsive-width{
-    width: 30%;
+    /* For mobile phones: */ 
+    .responsive-width{
+        width: 30%;
+    }
 }
-}
+@media (min-width: 600px) {
+    .column {
+      width: 50%;
+    }
+  }
 
 section {
     display: block;
@@ -33,6 +36,7 @@ section {
 .sidenav {
     height: 100%;
     width: 20%;
+    max-width: 20%;
     position: fixed;
     z-index: 1;
     top: 0;

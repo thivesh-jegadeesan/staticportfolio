@@ -51,20 +51,7 @@ body {
         display: block;
         margin-top:10%;
     }
-    .sidenav::before{
-        top: 15%;
-        left: 95%;
-        width: 10%;
-        height: 3%;
-        content: '<';
-        background-color: #000000;
-        position: absolute;
-        border-radius: 15%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        box-shadow: 0px 1px 5px;
-        text-align: center;
-    }
+    
 }
 
  .closebtn {

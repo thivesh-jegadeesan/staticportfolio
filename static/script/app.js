@@ -28,3 +28,34 @@ function scrollFunction() {
         btn.style.display = "none";
     }
 }
+
+// function openNav() {
+//     document.getElementById("sidenav").style.width = "20%";
+//     document.getElementById("main").style.marginLeft = "20%";
+//   }
+
+//   function closeNav() {
+//     document.getElementById("sidenav").style.width = "0%";
+//     document.getElementById("sidenav").style.padding = "-10%";
+//     document.getElementById("main").style.marginLeft= "0%";
+//   }
+
+  function openNav() {
+    document.getElementById("sidenav").style.width = "20%";
+    document.getElementById("main").style.marginLeft = "20%";
+    // Additional styling when the sidebar is open
+    document.getElementById("main").style.width = "80%";
+    document.getElementById("main").style.transition = "width 0.5s";
+    // You can add more styling if needed
+}
+
+function closeNav() {
+    document.getElementById("sidenav").style.width = "0%";
+    document.getElementById("sidenav").style.padding = "-10%";
+    document.getElementById("main").style.marginLeft = "0%";
+    // Additional styling when the sidebar is closed
+    document.getElementById("main").style.width = "100%";
+    document.getElementById("main").style.transition = "width 0.5s";
+    // You can add more styling if needed
+}
+

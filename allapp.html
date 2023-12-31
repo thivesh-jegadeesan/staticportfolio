@@ -16,7 +16,8 @@
 <body onload="myFunction()">
 
     <!-- Common sidebar -->
-    <div class="sidenav">
+    <div class="sidenav" id="sidenav">
+        <div class="closebtn" onclick="closeNav()" style="color: #fff;"><</div>
         <div>
           <center>
             <img src="static/images/01a.jpg" width="70%" style="border-radius: 50%;">
@@ -60,15 +61,16 @@
            <h5 style="text-align: center;color: #fff;border-bottom: 2px solid #5e678d;">PORTFOLIO</h5>
         </div>
     </div>
+    <button class="openbtn" onclick="openNav()">☰</button>  
 
     <!-- Content block to be overridden in child templates -->
-    <div class="content-fluid" style="margin-left:20%">
+    <div class="content-fluid"  id="main" style="margin-left:20%">
         <button onclick="goToTop()" id="goToTopBtn" title="Go to Top" data-tooltip="Scroll to Top">^</button>
-            <div class="container" id="Home" style="background-image: url('static/images/thiveshbg1.jpg');  background-repeat: no-repeat; background-size: 100% 100%; padding: 10px 150px 500px 150px;">
-                    <div class="row" style="padding:15% 0% 0% 10%; font-weight: bold; font-size:40px">
+            <div class="container" id="Home" style="background-image: url('static/images/thiveshbg1.jpg');  background-repeat: no-repeat; background-size: 100% 100%; padding-left: 10%;">
+                    <div class="row" style="padding:5% 0% 0% 0%; font-weight: bold; font-size:40px">
                         Thivesh Jegadeesan            
                     </div>
-                    <div class="row" style="padding:0% 0% 0% 20%">
+                    <div class="row" style="padding:0% 0% 0% 10%">
                         <div class="col-md-1"style="margin:0% 0% 0% 10%; width: fit-content;font-weight: bold; font-size:40px">
                             I'm a
                         </div> 

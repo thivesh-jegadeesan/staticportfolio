@@ -11,13 +11,19 @@ body {
 @media only screen and (max-width:800px) {
     /* For tablets: */      
     .responsive-width{
-        width: 70%;
+        width: 100%;
+    }
+    .col-sm-2{
+        width: 16.67%;
     }
 }
 @media only screen and (max-width:500px) {
     /* For mobile phones: */ 
     .responsive-width{
-        width: 30%;
+        width: 100%;
+    }
+    .col-sm-2{
+        width: 16.67%;
     }
 }
 @media (min-width: 600px) {

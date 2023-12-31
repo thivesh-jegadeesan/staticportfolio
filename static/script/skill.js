@@ -58,19 +58,23 @@ const roadMapData = [
 // Set up the SVG container
 const svg = d3.select('#roadMap')
   .append('svg')
-  .attr('width', 1000)
+  .attr('width', '100%')
   .attr('height', 400)
-  .attr('style', "font-size:12");
+  .attr('style', "font-size:5");
+
+  // Calculate a scaling factor based on the original width
+const originalWidth = 1000;
+const scaleFactor = parseFloat(svg.style('width')) / originalWidth;
 
 // Draw lines connecting each point
 svg.selectAll('line')
-  .data(roadMapData.slice(0, -1)) // Exclude the last point to prevent connecting back to the start
+  .data(roadMapData.slice(0, -1))
   .enter()
   .append('line')
-  .attr('x1', d => d.x)
-  .attr('y1', d => d.y)
-  .attr('x2', (d, i) => roadMapData[i + 1].x)
-  .attr('y2', (d, i) => roadMapData[i + 1].y)
+  .attr('x1', d => d.x * scaleFactor)
+  .attr('y1', d => d.y * scaleFactor)
+  .attr('x2', (d, i) => roadMapData[i + 1].x * scaleFactor)
+  .attr('y2', (d, i) => roadMapData[i + 1].y * scaleFactor)
   .style('stroke', '#000')
   .style('stroke-width', 3);
 
@@ -79,9 +83,9 @@ svg.selectAll('circle')
   .data(roadMapData)
   .enter()
   .append('circle')
-  .attr('cx', d => d.x)
-  .attr('cy', d => d.y)
-  .attr('r', 10) // Radius of the circles
+  .attr('cx', d => d.x * scaleFactor)
+  .attr('cy', d => d.y * scaleFactor)
+  .attr('r', 10 * scaleFactor) // Adjust the radius based on the scaling factor
   .style('fill', 'rgb(50 84 227)');
 
 // Add labels to the circles
@@ -89,8 +93,9 @@ svg.selectAll('text')
   .data(roadMapData)
   .enter()
   .append('text')
-  .attr('x', d => d.x)
-  .attr('y', d => d.y - 15)
+  .attr('class', 'text')  // Add the "text" class
+  .attr('x', d => d.x * scaleFactor)
+  .attr('y', d => (d.y - 15) * scaleFactor)
   .text(d => d.label)
   .style('text-anchor', 'middle')
   .style('fill', 'black');

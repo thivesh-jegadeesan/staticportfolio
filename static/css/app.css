@@ -7,7 +7,16 @@ body {
 .responsive-width{
     width: 100%;
 }
-
+.text {
+    font-size: 12px;
+  }
+  
+  /* Media query for smaller screens, adjust the font size as needed */
+  @media only screen and (max-width: 600px) {
+    .text {
+      font-size: 4px;
+    }
+  }
 @media only screen and (max-width:800px) {
     /* For tablets: */      
     .responsive-width{
@@ -39,7 +48,7 @@ body {
     .name{
         padding: 1% 4% 3% 7%;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 13px;
         color: #f1f1f1;
         display: block;
         margin-top:10%;
@@ -59,6 +68,9 @@ body {
   }
 @media only screen and (max-width:500px) {
     /* For mobile phones: */ 
+    svg {
+        font-size:4px;
+      }
     .responsive-width{
         width: 100%;
     }
@@ -66,12 +78,23 @@ body {
         width: 16.67%;
     }
     .name{
-        padding: 1% 4% 3% 7%;
+        padding: 5% 3% 5% 5%;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 13px;
         color: #f1f1f1;
         display: block;
         margin-top:10%;
+    }
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 90.5%;
+        width: 20px;
+        height: 20px;
+        background-color: #000000;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
     }
     
 }
@@ -132,7 +155,8 @@ body {
 }
 
 .sidenava{
-    padding: 6px 8px 6px 16px;
+    /* padding: 6px 8px 6px 16px; */
+    padding: 5% 1% 1% 5%;
     text-decoration: none;
     font-size: 18px;
     color: #818181;
@@ -140,7 +164,7 @@ body {
     bottom: 2%;
 }
 .name{
-    padding: 6px 8px 6px 16px;
+    padding: 5% 3% 5% 5%;
     text-decoration: none;
     font-size: 18px;
     color: #f1f1f1;
@@ -165,6 +189,9 @@ body {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenava {font-size: 18px;}
+    svg {
+        font-size:4px;
+      }
 }
 p{
     font-size: 18px;
@@ -287,7 +314,7 @@ padding: 3px;
     padding: 20px 0;
 }
 
-.timeline-item::after {
+/* .timeline-item::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -297,7 +324,7 @@ padding: 3px;
     background-color: #000000;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 .h2 {
     margin-top: 0;
@@ -400,3 +427,22 @@ color:#818181;
 footer h5{
 color:#fff;
 }
+
+@media only screen and (max-width: 600px) {
+    svg {
+      font-size:4px;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 800px) {
+    svg {
+      font-size: 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 801px) {
+    svg {
+      font-size: 12px;
+    }
+  }
+  

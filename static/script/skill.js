@@ -52,7 +52,9 @@ const roadMapData = [
   { label: 'Award "Excellence"', x: 100 , y: 300 },
   { label: 'Python, Django', x: 250, y: 300 },
   { label: 'Proj. Formulation', x: 400, y: 300 },
-  { label: 'Masters - Datascience', x: 700, y: 300 },
+  { label: 'Masters - Datascience', x: 550, y: 300 },
+  { label: 'Tableau', x: 700, y: 300 },
+  { label: 'Machine learning, Deep learning', x: 850, y: 300 },
 ];
 
 // Set up the SVG container

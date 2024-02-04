@@ -341,90 +341,7 @@ color:#fff;
     height: 400;
 }
   /* Media query for smaller screens, adjust the font size as needed */
-  
 
-  @media screen and (max-width: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenava {font-size: 18px;}
-    svg {
-        font-size:4px;
-    }
-    .name{
-        padding: 5% 3% 5% 5%;
-        text-decoration: none;
-        font-size: 13px;
-        color: #f1f1f1;
-        display: block;
-        margin-top: 10%;
-    }
-    .closebtn {
-        position: absolute;
-        top: 20vh;
-        right: 10px;
-        font-size: 18px;
-        background-color: #000000;
-        border-radius: 15%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        text-align: center;
-        width: fit-content;
-        padding: 0px 6px 0px 4px;
-        cursor: pointer;
-        display: block;
-      }
-      .quicklinks{
-        text-align:center
-    }
-}
-@media only screen and (max-width:500px) {
-    /* For mobile phones: */ 
-    svg {
-        font-size:4px;
-    }
-    .responsive-width{
-        width: 100%;
-    }
-    .col-sm-2{
-        width: 16.67%;
-    }
-    .name{
-        padding: 5% 3% 5% 5%;
-        text-decoration: none;
-        font-size: 13px;
-        color: #f1f1f1;
-        display: block;
-        margin-top:10%;
-    }
-    .timeline-item::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 90.5%;
-        width: 20px;
-        height: 20px;
-        background-color: #000000;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .closebtn {
-        position: absolute;
-        top: 20vh;
-        right: 10px;
-        font-size: 18px;
-        background-color: #000000;
-        border-radius: 15%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        text-align: center;
-        width: fit-content;
-        padding: 0px 6px 0px 4px;
-        cursor: pointer;
-        display: block;
-      }
-      .quicklinks{
-        text-align:center
-    }
-}
 @media only screen and (max-width: 800px) {
     /* For mobile phones: */ 
     .responsive-width{
@@ -489,5 +406,93 @@ svg {
   .quicklinks{
     text-align:center
 }
+}
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */ 
+    svg {
+        font-size:4px;
+    }
+    .responsive-width{
+        width: 100%;
+    }
+    .col-sm-2{
+        width: 16.67%;
+    }
+    #project{
+        margin-top: -300px;
+    }
+    .name{
+        padding: 5% 3% 5% 5%;
+        text-decoration: none;
+        font-size: 13px;
+        color: #f1f1f1;
+        display: block;
+        margin-top:10%;
+    }
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 108%;
+        width: 20px;
+        height: 20px;
+        background-color: #000000;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .closebtn {
+        position: absolute;
+        top: 20vh;
+        right: 10px;
+        font-size: 18px;
+        background-color: #000000;
+        border-radius: 15%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center;
+        width: fit-content;
+        padding: 0px 6px 0px 4px;
+        cursor: pointer;
+        display: block;
+      }
+      .quicklinks{
+        text-align:center
+    }
+}
+@media screen and (max-width: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenava {font-size: 18px;}
+    svg {
+        font-size:4px;
+    }
+    #project{
+        margin-top: -300px;
+    }
+    .name{
+        padding: 5% 3% 5% 5%;
+        text-decoration: none;
+        font-size: 13px;
+        color: #f1f1f1;
+        display: block;
+        margin-top: 10%;
+    }
+    .closebtn {
+        position: absolute;
+        top: 20vh;
+        right: 10px;
+        font-size: 18px;
+        background-color: #000000;
+        border-radius: 15%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center;
+        width: fit-content;
+        padding: 0px 6px 0px 4px;
+        cursor: pointer;
+        display: block;
+      }
+      .quicklinks{
+        text-align:center
+    }
 }
 
